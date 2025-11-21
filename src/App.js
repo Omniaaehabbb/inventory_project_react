@@ -1,7 +1,14 @@
-import ProductCatalog from './ProductCatalog';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProductCatalog from "./ProductCatalog";
 
 function App() {
-  return <ProductCatalog />;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<ProductCatalog />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
